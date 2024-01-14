@@ -1,0 +1,64 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { getEntry } from "astro:content";
+import { formatDate } from "../../utils";
+import Tags from "../../components/Tags.astro";
+
+const { slug } = Astro.params;
+
+if (!slug) {
+  throw new Error("No slug provided");
+}
+
+const entry = await getEntry("blog", slug);
+
+if (!entry) {
+  return Astro.redirect("/404");
+}
+
+const { Content } = await entry.render();
+
+//for static generation
+/*
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+
+
+export async function getStaticPaths() {
+  const allBlogArticles: CollectionEntry<'blog'>[] = await getCollection("blog");
+
+  return allBlogArticles.map(entry => ({
+    params: {
+      slug: entry.slug,
+    },
+    props: {
+      entry,
+    },
+  }));
+}
+
+const { entry } = Astro.props
+*/
+---
+
+<MainLayout>
+    <a href="/articles" class="inline-block bg-gray-100 p-2 mb-6 hover:bg-indigo-500 hover:text-white">Back To Articles</a>
+    <article>
+      <h1 class="text-4xl font-bold mb-2"> {entry.data.title}</h1>
+      <h3 transition:name={`post-title-${slug}`} class="text-lg mb-2">Written by  {entry.data.title} on {formatDate(entry.data.pubDate)}</h3>
+      <Tags tags={entry.data.tags} slug={slug} />
+      <img transition:name={`post-image-${slug}`} src={'/images/' + entry.data.image}  alt="Article Image" class="w-full h-auto rounded-xl my-6" />
+      <Content />
+    </article>
+</MainLayout>
+
+<style is:global>
+    p {
+        margin: 20px 0;
+    }
+
+    h2 {
+        margin: 20px 0;
+        font-size: 1.8rem;
+    }
+</style>
