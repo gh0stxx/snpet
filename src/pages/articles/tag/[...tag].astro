@@ -4,6 +4,7 @@ import ArticleCard from "../../../components/ArticleCard.astro";
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from "astro:content";
 import { capitalize } from "../../../utils";
+export const prerender = false;
 
 const { tag } = Astro.params;
 
