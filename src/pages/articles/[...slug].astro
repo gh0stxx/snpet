@@ -3,6 +3,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
 import { getEntry } from "astro:content";
 import { formatDate } from "../../utils";
 import Tags from "../../components/Tags.astro";
+import { Image } from "astro:assets";
 
 const { slug } = Astro.params;
 
@@ -47,7 +48,7 @@ const { entry } = Astro.props
       <h1 class="text-4xl font-bold mb-2"> {entry.data.title}</h1>
       <h3 transition:name={`post-title-${slug}`} class="text-lg mb-2">Written by  {entry.data.title} on {formatDate(entry.data.pubDate)}</h3>
       <Tags tags={entry.data.tags} slug={slug} />
-      <img transition:name={`post-image-${slug}`} src={'/images/' + entry.data.image}  alt="Article Image" class="w-full h-auto rounded-xl my-6" />
+      <Image height={400} width={600} transition:name={`post-image-${slug}`} src={entry.data.image}  alt="Article Image" class="w-full h-auto rounded-xl my-6" />
       <Content />
     </article>
 </MainLayout>
