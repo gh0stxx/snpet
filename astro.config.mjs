@@ -10,4 +10,12 @@ export default defineConfig({
   //ssr settings
   output: 'hybrid',
   adapter: vercelServerless(),
+  markdownOptions: {
+    rehypePlugins: [
+      // ...
+    ],
+    remarkPlugins: [
+      // ...
+    ],
+  },
 });
