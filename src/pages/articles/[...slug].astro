@@ -32,7 +32,7 @@ const { Content } = await entry.render();
     <article>
       <h1 class="text-4xl font-bold mb-2"> {entry.data.title}</h1>
       <Image height={400} width={600} transition:name={`post-image-${entry.slug}`} src={entry.data.image}  alt="Article Image" class="w-full h-auto rounded-xl my-6" />
-      <h3 transition:name={`post-title-${entry.slug}`} class="text-lg mb-2">Written by  {entry.data.author} on {formatDate(entry.data.pubDate)}</h3>
+      <h3 transition:name={`post-title-${entry.slug}`} class="text-lg mb-4">Written by  {entry.data.author} on {formatDate(entry.data.pubDate)}</h3>
       <Tags tags={entry.data.tags} slug={entry.slug} />
       <div class="content">
         <Content />

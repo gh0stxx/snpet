@@ -1,15 +1,10 @@
 ---
-import MainLayout from "../../layouts/MainLayout.astro";
-import { getCollection } from "astro:content";
-import type { CollectionEntry } from "astro:content";
+import MainLayout from "../../layouts/MainLayout.astro"
+import RecentArticle from "../../components/RecentArticle.astro";
 import ArticleCard from "../../components/ArticleCard.astro";
-import SearchForm from "../../components/SearchForm.astro";
-import Pagination from "../../components/Pagination.astro";
-import { ARTICLES_PER_PAGE } from "../../constants";
+import { HOME_PAGE_ARTICLE_LIMIT } from "../../constants";
+import { getCollection, type CollectionEntry } from "astro:content";
 
-const currentPage: number | null = Astro.url.searchParams.get("page")
-  ? parseInt(Astro.url.searchParams.get("page") as string)
-  : 1;
 
 const allBlogArticles: CollectionEntry<"blog">[] = (
   await getCollection("blog")
@@ -18,25 +13,35 @@ const allBlogArticles: CollectionEntry<"blog">[] = (
     b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
-const totalPages: number = Math.ceil(
-  allBlogArticles.length / ARTICLES_PER_PAGE
-);
+const mostRecentArticle: CollectionEntry<'blog'> = allBlogArticles[0];
 
-const artclesForPage: CollectionEntry<"blog">[] = allBlogArticles.slice(
-  (currentPage - 1) * ARTICLES_PER_PAGE,
-  currentPage * ARTICLES_PER_PAGE
-);
+const otherArticles: CollectionEntry<'blog'>[] = allBlogArticles.slice(1);
 ---
 
-<MainLayout>
-  <h1 class="text-2xl pb-3">All Articles</h1>
-  <!--<SearchForm /> -->
-  <br>
-  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-    {artclesForPage.map(article => (
-      <ArticleCard article={article} />
-    ))}
+<MainLayout >
+<!-- Top Grid -->
+<div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+  <div>
+    <h1 class="text-5xl font-bold mt-4 mb-8 leading-tight xl:text-6xl">
+      Tailored Care, Happy Pets: Where Every Pawprint Tells a Tail
+    </h1>
+
+      <!--<SearchForm /> -->
+    <br>
   </div>
- <Pagination currentPage={currentPage} totalPages={totalPages}
-  disablePrevious={currentPage ===1 } disableNext={currentPage === totalPages}/>
+
+<RecentArticle article={mostRecentArticle} />
+</div>
+
+<!-- Main Grid -->
+<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  {otherArticles.slice(0, HOME_PAGE_ARTICLE_LIMIT).map(article => (
+    <ArticleCard article={article} />
+  ))}
+</div>
+<div class="p-4 text-center">
+  <a href="/articles/all" class="text-xl font-bold p-6 mb-8 leading-tight xl:text-3xl">
+    More
+  </a>
+</div>
 </MainLayout>
