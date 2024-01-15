@@ -2,9 +2,9 @@
 import { ViewTransitions } from "astro:transitions";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../constants";
+import { SITE_DESCRIPTION } from "../constants";
 
-const { title = "All Your Pet Needs" } = Astro.props;
+const { title = "S & N Pet Services" } = Astro.props;
 
 interface Props {
   title?: string;
@@ -26,7 +26,7 @@ interface Props {
       });
     </script>
 
-    <title>{SITE_TITLE} - {SITE_DESCRIPTION}</title>
+    <title>{title} - {SITE_DESCRIPTION}</title>
     <ViewTransitions />
   </head>
   <body class="">
