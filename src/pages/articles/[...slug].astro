@@ -30,14 +30,14 @@ const { Content } = await entry.render();
 <MainLayout>
   <a
     href="/articles"
-    class="inline-block bg-gray-100 p-2 mb-6 hover:bg-indigo-500 hover:text-white"
+    class="inline-block bg-gray-100 p-2 my-6 hover:bg-indigo-500 hover:text-white"
     >Back To Articles</a
   >
   <article>
     <h1 class="text-4xl font-bold mb-2">{entry.data.title}</h1>
     <Image
-      height={400}
-      width={600}
+      height={11300}
+      width={1100}
       transition:name={`post-image-${entry.slug}`}
       src={entry.data.image}
       alt="Article Image"
@@ -47,7 +47,7 @@ const { Content } = await entry.render();
       Written by {entry.data.author} on {formatDate(entry.data.pubDate)}
     </h3>
     <Tags tags={entry.data.tags} slug={entry.slug} />
-    <div class="content">
+    <div class="content mt-8">
       <Content />
     </div>
   </article>

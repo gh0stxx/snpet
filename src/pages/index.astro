@@ -2,12 +2,13 @@
 import { Image } from "astro:assets";
 import MainLayout from "../layouts/MainLayout.astro";
 import logo from "../images/doggy.jpg";
+
 import test from "../images/test.png";
 ---
 
 <MainLayout>
   <!-- Top Grid -->
-  <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+  <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 xl:gap-40">
     <div class="lg:pe-6 my-auto">
       <h1 class="text-4xl font-bold mb-8 leading-tight xl:text-6xl">
         Pet Care Specialists
@@ -17,132 +18,36 @@ import test from "../images/test.png";
       </h2>
       <div class="relative w-full sm:w-auto cursor-pointer rounded-2xl">
         <p class="text-xl">
-          Welcome to our pet-loving hub in Hill Top, serving the Southern Highlands and Wollondilly areas! 🐾 We specialize in drop-in pet care services, offering high-quality and affordable options. From quick check-ins to playful doggy adventures, we're here to make your pets' days brighter.
-
-Whether you're away for the day, need a break, or want some extra support, count on us for reliable drop-in care. Your pets' well-being is our top priority, ensuring they're happy and cared for in the comfort of their own home. Let us bring joy to your pets' day and peace to your mind! 
+          Welcome to our pet-loving hub in Hill Top, serving the Southern
+          Highlands and Wollondilly areas! 🐾 We specialize in drop-in pet care
+          services, offering high-quality and affordable options. From quick
+          check-ins to playful doggy adventures, we're here to make your pets'
+          days brighter. Whether you're away for the day, need a break, or want
+          some extra support, count on us for reliable drop-in care. Your pets'
+          well-being is our top priority, ensuring they're happy and cared for
+          in the comfort of their own home. Let us bring joy to your pets' day
+          and peace to your mind!
         </p>
         <p>
-          Please note: We are not a boarding facility and do not
-          offer this service.
+          Please note: We are not a boarding facility and do not offer this
+          service.
         </p>
         <div>
-          <button class="mt-8 bg-indigo-700 text-white text-xl rounded-full px-6 py-4 shadow-gray-500 shadow-lg">Get In Touch</button>
+          <button
+            class="mt-8 bg-indigo-700 text-white text-xl rounded-full px-6 py-4 shadow-gray-500 shadow-lg"
+            >Get In Touch</button
+          >
         </div>
-
       </div>
     </div>
-    <div class="mt-4 ">
-      <Image src={logo} alt="logo" class="rounded-2xl" />
-    </div>
-
-    <!-- Main Grid -->
-    <div
-      class="relative inline-block w-full sm:w-auto cursor-pointer rounded-2xl mt-4"
-    >
-      <a href="">
-        <Image
-          height="300"
-          width={600}
-          src={test}
-          alt="Article Image"
-          class="w-full h-auto rounded-2xl"
-        />
-
-        <div
-          class="absolute inset-0 flex flex-col items-center justify-center bg-black opacity-80 hover:opacity-75 transition duration-300 ease-in-out text-white text-center rounded-2xl"
-        >
-          <div>
-            <h2 class="text-2xl font-semibold sm:text-3xl">Pet Sitting</h2>
-            <p class="text-xl mt-4">We offer drop in house visits in the Southern Highlands and Wollondilly areas.</p>
-
-            <!-- Tags with rounded border -->
-            <div class="flex mt-4 justify-center"></div>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div
-      class="relative inline-block w-full sm:w-auto cursor-pointer rounded-2xl mt-4"
-    >
-      <a href="">
-        <Image
-          height="300"
-          width={600}
-          src={test}
-          alt="Article Image"
-          class="w-full h-auto rounded-2xl"
-        />
-
-        <div
-          class="absolute inset-0 flex flex-col items-center justify-center bg-black opacity-80 hover:opacity-75 transition duration-300 ease-in-out text-white text-center rounded-2xl"
-        >
-          <div>
-            <h2 class="text-2xl font-semibold sm:text-3xl">Doggy Adventures & Exercise</h2>
-            <p class="text-xl mt-4">Energize your dog's day and eliminate unwanted behaviors with our personalized Doggy Adventures and Exercise services in the Southern Highlands.</p>
-
-            <!-- Tags with rounded border -->
-            <div class="flex mt-4 justify-center"></div>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div
-      class="relative inline-block w-full sm:w-auto cursor-pointer rounded-2xl mt-4"
-    >
-      <a href="">
-        <Image
-          height="250"
-          width={600}
-          src={test}
-          alt="Article Image"
-          class="w-full h-auto rounded-2xl"
-        />
-
-        <div
-          class="absolute inset-0 flex flex-col items-center justify-center bg-black opacity-80 hover:opacity-75 transition duration-300 ease-in-out text-white text-center rounded-2xl"
-        >
-          <div>
-            <h2 class="text-2xl font-semibold sm:text-3xl">Wedding Assistance</h2>
-            <p class="text-xl mt-4">Wedding pet chaperone services for the Southern Highlands, Macarthur and Illawarra regions.</p>
-
-            <!-- Tags with rounded border -->
-            <div class="flex mt-4 justify-center"></div>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div
-      class="relative inline-block w-full sm:w-auto cursor-pointer rounded-2xl mt-4"
-    >
-      <a href="">
-        <Image
-          height="300"
-          width={600}
-          src={test}
-          alt="Article Image"
-          class="w-full h-auto rounded-2xl"
-        />
-
-        <div
-          class="absolute inset-0 flex flex-col items-center justify-center bg-black opacity-80 hover:opacity-75 transition duration-300 ease-in-out text-white text-center rounded-2xl"
-        >
-          <div>
-            <h2 class="text-2xl font-semibold sm:text-3xl">Equine & Farm Care</h2>
-            <p class="text-xl mt-4"></p> Our qualified team specializes in equine and farm animal care. Schedule a complimentary meet and greet to discuss your routine, ensuring a worry-free day off or holiday, with us handling your farm responsibilities.</p>
-
-            <!-- Tags with rounded border -->
-            <div class="flex mt-4 justify-center"></div>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="p-4 text-center">
-      <a
-        href="/articles/all"
-        class="text-xl font-bold p-6 mb-8 leading-tight xl:text-3xl"
-      >
-        More
-      </a>
+    <div>
+      <Image src={logo} alt="logo" class="rounded-2xl float-end"  />
     </div>
   </div>
+  <div class="lg:mt-40 mt-8">
+    <h2 class="text-2xl font-bold leading-tight xl:text2xl mb-6">
+      Our Services
+    </h2>
+    </div>
+
 </MainLayout>
