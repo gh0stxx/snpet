@@ -6,9 +6,9 @@ import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-  const allBlogArticles = await getCollection('blog');
+  const allBlogArticles = await getCollection("blog");
 
-  return allBlogArticles.map(entry => ({
+  return allBlogArticles.map((entry) => ({
     params: {
       slug: entry.slug,
     },
@@ -28,41 +28,53 @@ const { Content } = await entry.render();
 ---
 
 <MainLayout>
-    <a href="/articles" class="inline-block bg-gray-100 p-2 mb-6 hover:bg-indigo-500 hover:text-white">Back To Articles</a>
-    <article>
-      <h1 class="text-4xl font-bold mb-2"> {entry.data.title}</h1>
-      <Image height={400} width={600} transition:name={`post-image-${entry.slug}`} src={entry.data.image}  alt="Article Image" class="w-full h-auto rounded-xl my-6" />
-      <h3 transition:name={`post-title-${entry.slug}`} class="text-lg mb-4">Written by  {entry.data.author} on {formatDate(entry.data.pubDate)}</h3>
-      <Tags tags={entry.data.tags} slug={entry.slug} />
-      <div class="content">
-        <Content />
-      </div>
-
-    </article>
+  <a
+    href="/articles"
+    class="inline-block bg-gray-100 p-2 mb-6 hover:bg-indigo-500 hover:text-white"
+    >Back To Articles</a
+  >
+  <article>
+    <h1 class="text-4xl font-bold mb-2">{entry.data.title}</h1>
+    <Image
+      height={400}
+      width={600}
+      transition:name={`post-image-${entry.slug}`}
+      src={entry.data.image}
+      alt="Article Image"
+      class="w-full h-auto rounded-xl my-6"
+    />
+    <h3 transition:name={`post-title-${entry.slug}`} class="text-lg mb-4">
+      Written by {entry.data.author} on {formatDate(entry.data.pubDate)}
+    </h3>
+    <Tags tags={entry.data.tags} slug={entry.slug} />
+    <div class="content">
+      <Content />
+    </div>
+  </article>
 </MainLayout>
 
 <style is:global>
-    p {
-        margin: 20px 0;
-    }
+  p {
+    margin: 20px 0;
+  }
 
-    h2 {
-        margin: 20px 0;
-        font-size: 1.8rem;
-    }
+  h2 {
+    margin: 20px 0;
+    font-size: 1.8rem;
+  }
 
-    .content ul {
-        list-style-type: disc; /* Use disc for bullet points */
-        padding-left: 2em; /* Add some padding to offset the bullet points */
-    }
-    .content ul li {
-        display: list-item;
-    }
-    .content ol {
-        list-style-type: decimal; /* Use decimal for numbered lists */
-        padding-left: 2em; /* Add some padding to offset the numbers */
-    }
-    .content ol li {
-        display: list-item;
-    }
+  .content ul {
+    list-style-type: disc; /* Use disc for bullet points */
+    padding-left: 2em; /* Add some padding to offset the bullet points */
+  }
+  .content ul li {
+    display: list-item;
+  }
+  .content ol {
+    list-style-type: decimal; /* Use decimal for numbered lists */
+    padding-left: 2em; /* Add some padding to offset the numbers */
+  }
+  .content ol li {
+    display: list-item;
+  }
 </style>

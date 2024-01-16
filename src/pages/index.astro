@@ -1,36 +1,38 @@
 ---
 import { Image } from "astro:assets";
 import MainLayout from "../layouts/MainLayout.astro";
-import logo from "../images/dogs_n.jpg";
+import logo from "../images/doggy.jpg";
 import test from "../images/test.png";
 ---
 
 <MainLayout>
   <!-- Top Grid -->
-  <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
-    <div class="lg:pe-6">
+  <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+    <div class="lg:pe-6 my-auto">
       <h1 class="text-4xl font-bold mb-8 leading-tight xl:text-6xl">
         Pet Care Specialists
       </h1>
       <h2 class="text-2xl font-bold leading-tight xl:text2xl mb-6">
         Serving the Southern Highlands since 2019
       </h2>
-      <div
-        class="relative inline-block w-full sm:w-auto cursor-pointer rounded-2xl"
-      >
+      <div class="relative w-full sm:w-auto cursor-pointer rounded-2xl">
         <p class="text-xl">
-          Based in Hill Top, we service the Southern Highlands and Wollondilly
-          areas. We provide high quality and affordable pet care services
-          including in home pet care visits, doggy adventures, farm minding and
-          more… Whether you need a stress free holiday, a well earned day off or
-          just need help to ease your workload a bit. We are here to help you
-          and your pets! Please note: We are not a boarding facility and do not
+          Welcome to our pet-loving hub in Hill Top, serving the Southern Highlands and Wollondilly areas! 🐾 We specialize in drop-in pet care services, offering high-quality and affordable options. From quick check-ins to playful doggy adventures, we're here to make your pets' days brighter.
+
+Whether you're away for the day, need a break, or want some extra support, count on us for reliable drop-in care. Your pets' well-being is our top priority, ensuring they're happy and cared for in the comfort of their own home. Let us bring joy to your pets' day and peace to your mind! 
+        </p>
+        <p>
+          Please note: We are not a boarding facility and do not
           offer this service.
         </p>
+        <div>
+          <button class="mt-8 bg-indigo-700 text-white text-xl rounded-full px-6 py-4 shadow-gray-500 shadow-lg">Get In Touch</button>
+        </div>
+
       </div>
     </div>
-    <div class="mt-4">
-      <Image src={logo} alt="logo" class="rounded-2xl" height={650} />
+    <div class="mt-4 ">
+      <Image src={logo} alt="logo" class="rounded-2xl" />
     </div>
 
     <!-- Main Grid -->
