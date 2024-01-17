@@ -17,6 +17,7 @@ interface Props {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={SITE_DESCRIPTION} />
+    <link rel="icon" href="/favicon.ico" />
     <script>
       //restart flowbite after ViewTransitions
       import "flowbite";
@@ -29,10 +30,9 @@ interface Props {
     <title>{title} - {SITE_DESCRIPTION}</title>
     <ViewTransitions />
   </head>
-  <body >
+  <body>
     <Navbar />
     <section class="mx-auto mt-4 gap-8">
-      
       <slot />
     </section>
     <Footer />
