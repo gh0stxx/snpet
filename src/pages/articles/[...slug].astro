@@ -28,6 +28,7 @@ const { Content } = await entry.render();
 ---
 
 <MainLayout>
+  <section class="container mx-auto">
   <a
     href="/articles"
     class="inline-block bg-gray-100 p-2 my-6 hover:bg-indigo-500 hover:text-white"
@@ -51,6 +52,7 @@ const { Content } = await entry.render();
       <Content />
     </div>
   </article>
+</section>
 </MainLayout>
 
 <style is:global>
