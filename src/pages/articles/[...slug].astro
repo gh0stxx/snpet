@@ -29,31 +29,33 @@ const { Content } = await entry.render();
 
 <MainLayout>
   <section class="container mx-auto">
-  <a
-    href="/articles"
-    class="inline-block bg-gray-100 p-2 my-6 hover:bg-indigo-500 hover:text-white"
-    >Back To Articles</a
-  >
-  <article>
-    <h1 class="text-4xl font-bold mb-2">{entry.data.title}</h1>
-    <Image
-      height={11300}
-      width={1100}
-      transition:name={`post-image-${entry.slug}`}
-      src={entry.data.image}
-      alt="Article Image"
-      class="w-full h-auto rounded-xl my-6"
-    />
-    <h3 transition:name={`post-title-${entry.slug}`} class="text-lg mb-4">
-      Written by {entry.data.author} on {formatDate(entry.data.pubDate)}
-    </h3>
-    <Tags tags={entry.data.tags} slug={entry.slug} />
-    <div class="content mt-8">
-      <Content />
-    </div>
-  </article>
-</section>
+    <a
+      href="/articles"
+      class="my-6 inline-block bg-gray-100 p-2 hover:bg-indigo-500 hover:text-white"
+      >Back To Articles</a
+    >
+    <article>
+      <h1 class="mb-2 text-4xl font-bold">{entry.data.title}</h1>
+      <Image
+        height={11300}
+        width={1100}
+        transition:name={`post-image-${entry.slug}`}
+        src={entry.data.image}
+        alt="Article Image"
+        class="my-6 h-auto w-full rounded-xl"
+      />
+      <h3 transition:name={`post-title-${entry.slug}`} class="mb-4 text-lg">
+        Written by {entry.data.author} on {formatDate(entry.data.pubDate)}
+      </h3>
+      <Tags tags={entry.data.tags} slug={entry.slug} />
+      <div class="content mt-8">
+        <Content />
+      </div>
+    </article>
+  </section>
 </MainLayout>
+
+//overrides for markdown content
 
 <style is:global>
   p {

@@ -1,51 +1,53 @@
 ---
-import MainLayout from "../../layouts/MainLayout.astro"
+import MainLayout from "../../layouts/MainLayout.astro";
 import RecentArticle from "../../components/RecentArticle.astro";
 import ArticleCard from "../../components/ArticleCard.astro";
 import { HOME_PAGE_ARTICLE_LIMIT } from "../../constants";
 import { getCollection, type CollectionEntry } from "astro:content";
 
-
 const allBlogArticles: CollectionEntry<"blog">[] = (
   await getCollection("blog")
 ).sort(
   (a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) =>
-    b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+    b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 
-const mostRecentArticle: CollectionEntry<'blog'> = allBlogArticles[0];
+const mostRecentArticle: CollectionEntry<"blog"> = allBlogArticles[0];
 
-const otherArticles: CollectionEntry<'blog'>[] = allBlogArticles.slice(1);
+const otherArticles: CollectionEntry<"blog">[] = allBlogArticles.slice(1);
 ---
 
-<MainLayout >
-<!-- Top Grid -->
-<section class="container mx-auto lg:mt-20">
-<div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
-  <div>
-    <h1 class="text-5xl font-bold mt-4 mb-8 leading-tight xl:text-6xl">
-      Tailored Care, Happy Pets: Where Every Pawprint Tells a Tail
-    </h1>
+<MainLayout>
+  <!-- Top Grid -->
+  <section class="container mx-auto lg:mt-20">
+    <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+      <div>
+        <h1 class="mb-8 mt-4 text-5xl font-bold leading-tight xl:text-6xl">
+          Tailored Care, Happy Pets: Where Every Pawprint Tells a Tail
+        </h1>
 
-      <!--<SearchForm /> -->
-    <br>
-  </div>
+        <!--<SearchForm /> -->
+        <br />
+      </div>
 
-<RecentArticle article={mostRecentArticle} />
-</div>
+      <RecentArticle article={mostRecentArticle} />
+    </div>
 
-<!-- Main Grid -->
-<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-  {otherArticles.slice(0, HOME_PAGE_ARTICLE_LIMIT).map(article => (
-    <ArticleCard article={article} />
-  ))}
-</div>
-<div class="p-4 text-center">
-  <a href="/articles/all" class="text-xl font-bold p-6 mb-8 leading-tight xl:text-3xl">
-    More
-  </a>
-</div>
-
-</section>
-
+    <!-- Main Grid -->
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        otherArticles
+          .slice(0, HOME_PAGE_ARTICLE_LIMIT)
+          .map((article) => <ArticleCard article={article} />)
+      }
+    </div>
+    <div class="p-4 text-center">
+      <a
+        href="/articles/all"
+        class="mb-8 p-6 text-xl font-bold leading-tight xl:text-3xl"
+      >
+        More
+      </a>
+    </div>
+  </section>
 </MainLayout>

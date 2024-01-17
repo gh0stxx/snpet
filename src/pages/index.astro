@@ -1,7 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 
-
 import test from "../images/test.png";
 import Hero from "../components/Hero.astro";
 ---
@@ -9,10 +8,62 @@ import Hero from "../components/Hero.astro";
 <MainLayout>
   <!-- Top Grid -->
   <Hero />
-  <div class="lg:mt-40 mt-8 bg-indigo-900 p-40 w-full">
-    <h2 class="text-white text-center text-2xl font-bold leading-tight xl:text2xl mb-6">
-      Our Services
-    </h2>
+  <section class="mt-8 w-full bg-indigo-900 lg:mt-40">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 gap-8 py-8 md:grid-cols-3 xl:grid-cols-4">
+        <div class="rounded-2xl p-8">
+          <div class="">
+            <h1 class="text-xl font-bold text-white">WEDDING ASSISTANCE</h1>
+            <br />
+            <p class="text-md text-white">
+              What could be better than having your furry family member there on
+              your special day and not have to worry about their care &
+              transport or them missing out on those once in a lifetime family
+              photos! But be prepared they will be sure to steal the spotlight
+            </p>
+          </div>
+        </div>
+        <div class="rounded-2xl p-8">
+          <div class="">
+            <h1 class="text-xl font-bold text-white">DOGGY ADVENTURE DAY</h1>
+            <br />
+            <p class="text-md text-white">
+              Do you come home after a long day at work to find your dogs have
+              an abundance of energy, have destroyed everything in sight or
+              escaped your yard.. yet again? We can help curb these behaviours
+              and have you coming home to a nice and relaxed dog that is ready
+              to snuggle up on the lounge with you.
+            </p>
+          </div>
+        </div>
+        <div class="rounded-2xl p-8">
+          <div class="">
+            <h1 class="text-xl font-bold text-white">PET CARE VISITS</h1>
+            <br>
+            <p class="text-md text-white">
+              We offer drop in house visits in the Southern Highlands and
+              Wollondilly areas. Alot of owners worry about
+              putting their pets in boarding kennels and than you have all those
+              animals like fish, rabbits, reptiles and more that you have to
+              rely on neighbours or friends to feed and care for them, But this
+              is where we come in.
+            </p>
+          </div>
+        </div>
+        <div class="rounded-2xl p-8">
+          <div class="">
+            <h1 class="text-xl font-bold text-white">EQUINE & FARM CARE</h1>
+            <br>
+            <p class="text-md text-white">
+              Equids and other farm animals require a whole different level of
+              care. We understand that and are qualified and experienced in
+              handling them and caring for your farm. Just because you own these
+              animals doesn’t mean you don’t deserve a day off or a holiday and
+              this is where we come in. 
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-
+  </section>
 </MainLayout>
