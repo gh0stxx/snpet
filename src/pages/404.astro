@@ -6,9 +6,19 @@ import error from "../images/error-404.png";
 
 <MainLayout title="404 - Page Not Found">
   <div class="flex flex-col items-center justify-items-center gap-7">
-    <Image src={error} alt="404 - Page Not Found" height={250} width={250} class="mt-10" />
+    <Image
+      src={error}
+      alt="404 - Page Not Found"
+      height={250}
+      width={250}
+      class="mt-10"
+    />
     <h1 class="text-5xl">404 - Page Not Found</h1>
-    <p class="text-2xl mb-10">The page you are looking for does not exist.</p>
-    <a href="/" class="inline-block bg-gray-100 p-2 mb-6 hover:bg-indigo-500 hover:text-white">Go back to the homepage</a>
+    <p class="mb-10 text-2xl">The page you are looking for does not exist.</p>
+    <a
+      href="/"
+      class="mb-6 inline-block bg-gray-100 p-2 hover:bg-indigo-500 hover:text-white"
+      >Go back to the homepage</a
+    >
   </div>
 </MainLayout>
