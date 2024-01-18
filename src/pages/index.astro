@@ -7,104 +7,123 @@ import Hero from "../components/Hero.astro";
 <MainLayout>
   <!-- Top Grid -->
   <Hero />
-  <section class="mt-8 w-full bg-indigo-900 lg:mt-40">
-    <div class="mx-auto max-w-[1800px]">
+  <section class="mt-8 w-full bg-sky-950 lg:mt-40">
+    <div class="mx-auto max-w-[2000px] p-4">
       <div class="p-8">
-        <h1 class="text-center text-xl font-bold text-white">OUR SERVICES</h1>
+        <h1 class="text-center text-4xl font-bold text-white">OUR SERVICES</h1>
       </div>
       <div
-        class="grid h-auto grid-cols-1 grid-rows-1 gap-4 md:grid-cols-2 lg:grid-cols-4"
+        class="grid h-auto grid-cols-1 grid-rows-1 justify-items-center gap-8 py-8 md:grid-cols-2 xl:grid-cols-4"
       >
-        <div class="flex flex-col justify-between space-y-8 rounded-2xl p-8">
-          <div>
-            <h1 class="text-xl font-bold text-white">WEDDING ASSISTANCE</h1>
-
-            <p class="text-md line pt-8 leading-6 text-white">
-              What could be better than having your furry family member there on
-              your special day and not have to worry about their care &
-              transport or them missing out on those once in a lifetime family
-              photos! But be prepared they will be sure to steal the spotlight
+        <div
+          class="max-w-md rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800"
+        >
+          <a href="#">
+            <img class="rounded-t-lg" src="/wed2.jpg" alt="" />
+          </a>
+          <div class="p-5">
+            <a href="#">
+              <h5
+                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+              >
+                Wedding Assistance
+              </h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              "Ensure your special day shines with your furry friend,
+              worry-free. No care hassles, just spotlight-stealing joy!
             </p>
-          </div>
-          <div>
             <button
               type="button"
-              class="inline-block cursor-pointer select-none rounded border-[#5ad4f6] bg-[#8dd0ef] px-6 py-2.5 text-base font-medium text-[#1e2026]
-                       outline-none transition-all duration-500 hover:-translate-y-1.5 hover:bg-[#62b3e2] focus:outline-none focus:ring-0 focus:ring-offset-0"
+              class="inline-block cursor-pointer select-none rounded border-[#5ad4f6] bg-slate-900 px-6 py-2.5 text-base font-medium text-white
+                       outline-none transition-all duration-500 hover:-translate-y-1.5 hover:bg-indigo-400 focus:outline-none focus:ring-0 focus:ring-offset-0"
             >
-            Find Out More<span
-                class="ml-2 align-middle text-xl"></span>
+              More Info
+              <span class="ml-2 align-middle text-xl"></span>
             </button>
           </div>
         </div>
-        <div class="flex flex-col justify-between space-y-8 rounded-2xl p-8">
-          <div>
-            <h1 class="text-xl font-bold text-white">DOGGY ADVENTURE DAY</h1>
-
-            <p class="text-md line pt-8 leading-6 text-white">
-              Do you come home after a long day at work to find your dogs have
-              an abundance of energy, have destroyed everything in sight or
-              escaped your yard.. yet again? We can help curb these behaviours
-              and have you coming home to a nice and relaxed dog that is ready
-              to snuggle up on the lounge with you.
+        <div
+          class="max-w-md rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800"
+        >
+          <a href="#">
+            <img class="rounded-t-lg" src="/adv.jpg" alt="" />
+          </a>
+          <div class="p-5">
+            <a href="#">
+              <h5
+                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+              >
+                Doggy Adventures
+              </h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              Return to a serene home, not chaos. Our services tackle dog
+              boredom, ensuring a calm, happy reunion.
             </p>
-          </div>
-          <div>
             <button
               type="button"
-              class="inline-block cursor-pointer select-none rounded border-[#5ad4f6] bg-[#8dd0ef] px-6 py-2.5 text-base font-medium text-[#1e2026]
-                       outline-none transition-all duration-500 hover:-translate-y-1.5 hover:bg-[#62b3e2] focus:outline-none focus:ring-0 focus:ring-offset-0"
+              class="inline-block cursor-pointer select-none rounded border-[#5ad4f6] bg-slate-900 px-6 py-2.5 text-base font-medium text-white
+                       outline-none transition-all duration-500 hover:-translate-y-1.5 hover:bg-indigo-400 focus:outline-none focus:ring-0 focus:ring-offset-0"
             >
-             Find Out More<span
-                class="ml-2 align-middle text-xl"></span>
+              More Info
+              <span class="ml-2 align-middle text-xl"></span>
             </button>
           </div>
         </div>
-        <div class="flex flex-col justify-between space-y-8 rounded-2xl p-8">
-          <div>
-            <h1 class="text-xl font-bold text-white">PET CARE VISITS</h1>
-
-            <p class="text-md line pt-8 leading-6 text-white">
-              We offer drop in house visits in the Southern Highlands and
-              Wollondilly areas. Alot of owners worry about putting their pets
-              in boarding kennels and than you have all those animals like fish,
-              rabbits, reptiles and more that you have to rely on neighbours or
-              friends to feed and care for them, But this is where we come in.
+        <div
+          class="max-w-md rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800"
+        >
+          <a href="#">
+            <img class="rounded-t-lg" src="/visit.jpg" alt="" />
+          </a>
+          <div class="p-5">
+            <a href="#">
+              <h5
+                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+              >
+                Pet Care Visits
+              </h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              Say goodbye to pet care stress! Our Southern Highlands and
+              Wollondilly house visits ensure worry-free holidays.
             </p>
-          </div>
-
-          <div>
             <button
               type="button"
-              class="inline-block cursor-pointer select-none rounded border-[#5ad4f6] bg-[#8dd0ef] px-6 py-2.5 text-base font-medium text-[#1e2026]
-                       outline-none transition-all duration-500 hover:-translate-y-1.5 hover:bg-[#62b3e2] focus:outline-none focus:ring-0 focus:ring-offset-0"
+              class="inline-block cursor-pointer select-none rounded border-[#5ad4f6] bg-slate-900 px-6 py-2.5 text-base font-medium text-white
+                       outline-none transition-all duration-500 hover:-translate-y-1.5 hover:bg-indigo-400 focus:outline-none focus:ring-0 focus:ring-offset-0"
             >
-            Find Out More<span
-                class="ml-2 align-middle text-xl"></span>
+              More Info
+              <span class="ml-2 align-middle text-xl"></span>
             </button>
           </div>
         </div>
-        <div class="flex flex-col justify-between space-y-8 rounded-2xl p-8">
-          <div>
-            <h1 class="text-xl font-bold text-white">EQUINE & FARM CARE</h1>
-
-            <p class="text-md line pt-8 leading-6 text-white">
-              Equids and other farm animals require a whole different level of
-              care. We understand that and are qualified and experienced in
-              handling them and caring for your farm. Just because you own these
-              animals doesn't mean you don't deserve a day off or a holiday and
-              this is where we come in.
+        <div
+          class="max-w-md rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800"
+        >
+          <a href="#">
+            <img class="rounded-t-lg" src="/horse.jpg" alt="" />
+          </a>
+          <div class="p-5">
+            <a href="#">
+              <h5
+                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+              >
+                Equine & Farm Care
+              </h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              Farm animals need expert care too! Take a break worry-free with
+              our qualified team. Schedule your meet-and-greet today!
             </p>
-          </div>
-
-          <div>
             <button
               type="button"
-              class="inline-block cursor-pointer select-none rounded border-[#5ad4f6] bg-[#8dd0ef] px-6 py-2.5 text-base font-medium text-[#1e2026]
-                       outline-none transition-all duration-500 hover:-translate-y-1.5 hover:bg-[#62b3e2] focus:outline-none focus:ring-0 focus:ring-offset-0"
+              class="inline-block cursor-pointer select-none rounded border-[#5ad4f6] bg-slate-900 px-6 py-2.5 text-base font-medium text-white
+                       outline-none transition-all duration-500 hover:-translate-y-1.5 hover:bg-indigo-400 focus:outline-none focus:ring-0 focus:ring-offset-0"
             >
-            Find Out More<span
-                class="ml-2 align-middle text-xl"></span>
+              More Info
+              <span class="ml-2 align-middle text-xl"></span>
             </button>
           </div>
         </div>

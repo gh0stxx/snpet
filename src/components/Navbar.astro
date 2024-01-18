@@ -171,3 +171,12 @@ import logo from "../images/logo.png";
     </div>
   </div>
 </nav>
+
+<script>
+  //restart flowbite after ViewTransitions
+  import "flowbite";
+  import { initFlowbite } from "flowbite";
+  document.addEventListener("astro:page-load", () => {
+    initFlowbite();
+  });
+</script>
