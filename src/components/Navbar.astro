@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import logo from "../images/logo.png";
+
+const currentPath = Astro.url.pathname;
 ---
 
 <nav
@@ -55,7 +57,7 @@ import logo from "../images/logo.png";
         <li>
           <a
             href="/"
-            class="block rounded bg-indigo-700 px-3 py-2 text-white dark:bg-blue-600 md:bg-transparent md:p-0 md:text-blue-700 md:dark:bg-transparent md:dark:text-blue-500"
+            class={`${currentPath === "/" ? "text-indigo-700" : "text-gray-900"} block rounded px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 dark:focus:text-white md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500`}
             aria-current="page">Home</a
           >
         </li>
@@ -92,35 +94,40 @@ import logo from "../images/logo.png";
               <li>
                 <a
                   href="#"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  class={`${currentPath === "/wedding" ? "text-indigo-700" : "text-gray-900"} block rounded px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700
+             dark:focus:text-white md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500`}
                   >Wedding Assitance</a
                 >
               </li>
               <li>
                 <a
                   href="#"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  class={`${currentPath === "/adventure" ? "text-indigo-700" : "text-gray-900"} block rounded px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700
+             dark:focus:text-white md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500`}
                   >Doggy Adventrue Days</a
                 >
               </li>
               <li>
                 <a
                   href="#"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  class={`${currentPath === "/visits" ? "text-indigo-700" : "text-gray-900"} block rounded px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700
+             dark:focus:text-white md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500`}
                   >Pet Care Visits</a
                 >
               </li>
               <li>
                 <a
                   href="#"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  class={`${currentPath === "/equine" ? "text-indigo-700" : "text-gray-900"} block rounded px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700
+             dark:focus:text-white md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500`}
                   >Equine & Farm Care</a
                 >
               </li>
               <li>
                 <a
                   href="#"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  class={`${currentPath === "/products" ? "text-indigo-700" : "text-gray-900"} block rounded px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700
+             dark:focus:text-white md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500`}
                   >Products</a
                 >
               </li>
@@ -130,40 +137,40 @@ import logo from "../images/logo.png";
         <li>
           <a
             href="#"
-            class="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700
-           dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
+            class={`${currentPath === "/testimonials" ? "text-indigo-700" : "text-gray-900"} block rounded px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700
+             dark:focus:text-white md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500`}
             >Testimonials</a
           >
         </li>
         <li>
           <a
             href="#"
-            class="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700
-           dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
+            class={`${currentPath === "/contact" ? "text-indigo-700" : "text-gray-900"} block rounded px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700
+             dark:focus:text-white md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500`}
             >Contact Us</a
           >
         </li>
         <li>
           <a
             href="#"
-            class="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700
-           dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
+            class={`${currentPath === "/terms" ? "text-indigo-700" : "text-gray-900"} block rounded px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700
+             dark:focus:text-white md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500`}
             >Terms Of Service</a
           >
         </li>
         <li>
           <a
             href="/articles"
-            class="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700
-           dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
+            class={`${currentPath === "/articles" ? "text-indigo-700" : "text-gray-900"} block rounded px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700
+             dark:focus:text-white md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500`}
             >Blog</a
           >
         </li>
         <li>
           <a
             href="#"
-            class="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700
-           dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
+            class={`${currentPath === "/faq" ? "text-indigo-700" : "text-gray-900"} block rounded px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700
+             dark:focus:text-white md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500`}
             >FAQ</a
           >
         </li>
