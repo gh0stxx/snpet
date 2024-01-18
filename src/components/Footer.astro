@@ -1,13 +1,11 @@
 ---
 import { getCollection } from "astro:content";
 import type { CollectionEntry, CollectionKey } from "astro:content";
-import { capitalize } from "../utils";
 
 const allBlogArticles: CollectionEntry<"blog">[] = await getCollection("blog");
 
 const tags: string[] = allBlogArticles.flatMap((article) => article.data.tags);
 
-const uniqueTags: string[] = [...new Set(tags)];
 ---
 
 <footer class="bg-indigo-900 text-white">
