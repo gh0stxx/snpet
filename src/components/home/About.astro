@@ -1,0 +1,38 @@
+---
+import logo from '../../images/aboutdogs.png';
+import { Image } from 'astro:assets';
+---
+
+<section class="container mx-auto mt-4 gap-8 p-4 lg:mt-20">
+  <h1 class="text-center">
+    <span class="text-4xl font-bold">About </span>
+    <span class="text-sky-900 text-4xl font-bold">Me</span>
+  </h1>
+  <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 xl:gap-40">
+    <div>
+      <Image src={logo} alt="logo" class="rounded-2xl" />
+    </div>
+    <div class="my-auto lg:pe-6">
+      <ul class="list-disc text-xl p-4">
+        <li>Over 13 years in the animal industry.</li>
+        <li>Pet sitting certifications</li>
+        <li>Certificate II and III in animal studies and equine health and management</li>
+        <li>Trained in basic animal first aid</li>
+        <li>Completed professional development seminars in animal Behaviour with the delta society</li>
+        <li>Previously worked within zoo’s, boarding kennels, farms, horse studs and wildlife sanctuaries.</li>
+        <li>Police checked</li>
+        <li>Fully insured</li>
+        <li>Pet owner</li>
+        <li>A passion for helping pets and their owners, to make their lives easier, happier and more rewarding</li>
+      </ul>
+      <br>
+      <p class="italic">
+        “As a mum of 2 beautiful kids, a wife and a small business owner, i understand that life is hectic and sometimes your to do list just never
+        seems to get any smaller. A helping paw is just what you need and that is me. Anything you need for any of your animals I am here to help ease
+        the workload to give them the care they need and the love they deserve”
+        </p>
+        <br>
+      <h2 class="text-lg">CAYLEE RAINE ~ OWNER & FOUNDER</h2>
+    </div>
+  </div>
+</section>

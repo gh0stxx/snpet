@@ -1,0 +1,47 @@
+---
+import logo from "../../images/dog.jpg";
+import { Image } from "astro:assets";
+---
+
+<section class="container mx-auto mt-4 gap-8 p-4 lg:mt-40">
+  <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 xl:gap-40">
+    <div class="my-auto lg:pe-6">
+      <h1 class="mb-8 text-2xl font-bold leading-tight xl:text-5xl">
+        Your Local Pet Care Specialist
+      </h1>
+      <h2 class="xl:text2xl pb-8 text-xl font-bold leading-tight">
+        Serving the Southern Highlands since 2019
+      </h2>
+      <div class="relative w-full cursor-pointer rounded-2xl sm:w-auto">
+        <p class="text-xl">
+          Welcome to our pet-loving hub in Hill Top, serving the Southern
+          Highlands and Wollondilly areas! 🐾 We specialize in drop-in pet care
+          services, offering high-quality and affordable options. From quick
+          check-ins to playful doggy adventures, we're here to make your pets'
+          days brighter. Whether you're away for the day, need a break, or want
+          some extra support, count on us for reliable drop-in care. Your pets'
+          well-being is our top priority, ensuring they're happy and cared for
+          in the comfort of their own home. Let us bring joy to your pets' day
+          and peace to your mind!
+        </p>
+        <br>
+        <p class="italic">
+          Please note: We are not a boarding facility and do not offer this
+          service.
+        </p>
+        <div class="pt-8">
+          <button
+            type="button"
+            class="inline-block cursor-pointer select-none rounded border-[#5ad4f6] bg-sky-600 px-6 py-2.5 text-base font-medium text-white shadow-md shadow-gray-400
+                       outline-none transition-all duration-500 hover:-translate-y-1.5 hover:bg-indigo-400 focus:outline-none focus:ring-0 focus:ring-offset-0"
+          >
+            Get In Touch<span class="ml-2 align-middle text-xl"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <Image src={logo} alt="logo" class="float-end rounded-2xl" />
+    </div>
+  </div>
+</section>

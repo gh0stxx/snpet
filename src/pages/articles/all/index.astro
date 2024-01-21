@@ -2,8 +2,8 @@
 import MainLayout from "../../../layouts/MainLayout.astro";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
-import ArticleCard from "../../../components/ArticleCard.astro";
-import Pagination from "../../../components/Pagination.astro";
+import ArticleCard from "../../../components/blog/ArticleCard.astro";
+import Pagination from "../../../components/blog/Pagination.astro";
 import { ARTICLES_PER_PAGE } from "../../../constants";
 
 const currentPage: number | null = Astro.url.searchParams.get("page")
