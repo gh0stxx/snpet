@@ -15,7 +15,7 @@
     "@astrojs/tailwind": "^5.1.0",
     "@astrojs/vercel": "^6.1.4",
     "@fontsource/poppins": "^5.0.8",
-    "astro": "^4.2.0",
+    "astro": "^4.3.5",
     "astro-icon": "^1.0.2",
     "flowbite": "^2.2.1",
     "framer-motion": "^10.18.0",
